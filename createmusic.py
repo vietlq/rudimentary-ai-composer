@@ -68,6 +68,10 @@ model.add(Activation("linear"))
 
 optimizer = RMSprop(lr=0.01)
 model.compile(loss="mse", optimizer="rmsprop")
+
+X = np.array(X)
+Y = np.array(Y)
+
 model.fit(X, Y, batch_size=300, epochs=400, verbose=1)
 ###########################################
 
